@@ -10,7 +10,7 @@
                 "path": "/etc/sing-box/cache.db"
         },
       "clash_api": {
-        "external_controller": "10.0.0.3:9090",
+        "external_controller": "127.0.0.1:9090",
         "external_ui": "/etc/sing-box/ui",
         "secret": "",
         "external_ui_download_detour": "autoSelect",
