@@ -75,6 +75,7 @@
       { "tag": "autoJap", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇯🇵|JP|jp|日本|日|Japan"] }], "url": "http://www.gstatic.com/generate_204", "interval": "10m", "tolerance": 50 },
       { "tag": "autoSp", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["新加坡"] }], "url": "http://www.gstatic.com/generate_204", "interval": "10m", "tolerance": 50 },
       { "tag": "manualSelect", "type": "selector", "outbounds": ["autoSelect", "autoHK", "autoUSA", "autoJap", "autoSp", "{all}"], "default": "autoSelect" },
+      {"tag": "emby","type": "selector","outbounds": ["autoSelect","autoHK","autoUSA","autoJap","autoSp","{all}","direct"],"default": "autoSelect"},
       { "tag": "GLOBAL", "type": "selector", "outbounds": ["{all}"] }
     ],
 
@@ -88,6 +89,7 @@
         { "clash_mode": "direct", "outbound": "direct-out" },
         { "clash_mode": "global", "outbound": "GLOBAL" },
         { "domain": ["clash.razord.top", "yacd.metacubex.one", "yacd.haishan.me", "d.metacubex.one"], "outbound": "direct-out" },
+        {"domain": ["pub1.emby.wtf","pub2.emby.wtf","pub3.emby.wtf","pub1.term.wtf","pub2.term.wtf","pub3.term.wtf"],"outbound": "emby"},
         { "ip_is_private": true, "outbound": "direct-out" },
         {"rule_set":"ad","outbound": "block-out"},
 
