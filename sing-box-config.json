@@ -75,9 +75,9 @@
       { "tag": "autoJap", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇯🇵|JP|jp|日本|日|Japan"] }], "url": "http://www.gstatic.com/generate_204", "interval": "10m", "tolerance": 50 },
       { "tag": "autoSp", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["新加坡"] }], "url": "http://www.gstatic.com/generate_204", "interval": "10m", "tolerance": 50 },
       { "tag": "manualSelect", "type": "selector", "outbounds": ["autoSelect", "autoHK", "autoUSA", "autoJap", "autoSp", "{all}"], "default": "autoSelect" },
-      {"tag": "emby","type": "selector","outbounds": ["autoSelect","autoHK","autoUSA","autoJap","autoSp","{all}","direct-out"],"default": "autoSelect"},
+      {"tag": "emby","type": "selector","outbounds": ["autoSelect","autoHK","autoUSA","autoJap","autoSp","{all}","direct-out"],"default": "direct-out"},
       { "tag": "GLOBAL", "type": "selector", "outbounds": ["{all}"] },
-      { "tag": "epicAndSteam","type": "selector","outbounds": ["{all}","direct-out"]}
+      { "tag": "epicAndSteam","type": "selector","outbounds": ["{all}","direct-out"],"default": "direct-out"}
     ],
 
 
