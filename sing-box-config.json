@@ -39,7 +39,7 @@
       "independent_cache": false,
       "final": "google"
     },
-  
+
 
 
     "inbounds": [
@@ -51,7 +51,7 @@
         "sniff": true,
         "endpoint_independent_nat": false,
         "stack": "system"
-        
+
         }
       ,
       {
@@ -62,8 +62,8 @@
         "users": []
       }
     ],
-  
-    
+
+
     "outbounds": [
       { "tag": "direct-out", "type": "direct" },
       { "tag": "dns-out", "type": "dns" },
@@ -76,10 +76,11 @@
       { "tag": "autoSp", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["新加坡"] }], "url": "http://www.gstatic.com/generate_204", "interval": "10m", "tolerance": 50 },
       { "tag": "manualSelect", "type": "selector", "outbounds": ["autoSelect", "autoHK", "autoUSA", "autoJap", "autoSp", "{all}"], "default": "autoSelect" },
       {"tag": "emby","type": "selector","outbounds": ["autoSelect","autoHK","autoUSA","autoJap","autoSp","{all}","direct-out"],"default": "autoSelect"},
-      { "tag": "GLOBAL", "type": "selector", "outbounds": ["{all}"] }
+      { "tag": "GLOBAL", "type": "selector", "outbounds": ["{all}"] },
+      { "tag": "epicAndSteam","type": "selector","outbounds": ["{all}","direct-out"]}
     ],
 
-    
+
     "route": {
           "auto_detect_interface": true,
           "final": "autoSelect",
@@ -92,19 +93,21 @@
         {"domain": ["pub1.emby.wtf","pub2.emby.wtf","pub3.emby.wtf","pub1.term.wtf","pub2.term.wtf","pub3.term.wtf"],"outbound": "emby"},
         { "ip_is_private": true, "outbound": "direct-out" },
         {"rule_set":"ad","outbound": "block-out"},
-
         {"rule_set": ["cnip","cnsite"],"outbound": "direct-out"},
         {"rule_set":"opanai","outbound": "autoUSA"},
-        {"rule_set":["twitter","youtube"],"outbound": "autoSp"}
-      ],      
+        {"rule_set":["twitter","youtube"],"outbound": "autoSp"},
+        {"rule_set": ["epicgames","epicbrowser","steam"],"outbound": "epicAndSteam"}
+      ],
       "rule_set": [
         {"type": "remote","tag": "cnip","format": "binary","url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geoip/cn.srs","download_detour": "autoSelect"},
         {"type": "remote","tag": "cnsite","format": "binary","url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/cn.srs","download_detour": "autoSelect"},
         {"type": "remote","tag": "opanai","format": "binary","url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/openai.srs","download_detour": "autoSelect"},
         {"type": "remote","tag": "twitter","format": "binary","url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/twitter.srs","download_detour": "autoSelect"},
         {"type": "remote","tag": "youtube","format": "binary","url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/youtube.srs","download_detour": "autoSelect"},
-        {"type": "remote","tag": "ad","format": "binary","url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs","download_detour": "autoSelect"}
+        {"type": "remote","tag": "ad","format": "binary","url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs","download_detour": "autoSelect"},
+        {"type": "remote","tag": "epicgames","format": "binary","url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/epicgames.srs","download_detour": "autoSelect"},
+        {"type": "remote","tag": "epicbrowser","format": "binary","url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/epicbrowser.srs","download_detour": "autoSelect"},
+        {"type": "remote","tag": "steam","format": "binary","url": "https: //github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/steam@cn.srs","download_detour": "autoSelect"}
       ]
     }
   }
-  
