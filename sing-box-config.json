@@ -99,13 +99,13 @@
         {"rule_set": ["epicgames","epicbrowser"],"outbound": "epicAndSteam"}
       ],
       "rule_set": [
-        {"type": "remote","tag": "cnip","format": "binary","url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geoip/cn.srs","download_detour": "direct-out"},
-        {"type": "remote","tag": "cnsite","format": "binary","url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/cn.srs","download_detour": "direct-out"},
-        {"type": "remote","tag": "opanai","format": "binary","url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/openai.srs","download_detour": "direct-out"},
-        {"type": "remote","tag": "youtube","format": "binary","url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/youtube.srs","download_detour": "direct-out"},
-        {"type": "remote","tag": "ad","format": "binary","url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs","download_detour": "direct-out"},
-        {"type": "remote","tag": "epicgames","format": "binary","url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/epicgames.srs","download_detour": "direct-out"},
-        {"type": "remote","tag": "epicbrowser","format": "binary","url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/epicbrowser.srs","download_detour": "direct-out"}
+        {"type": "remote","tag": "cnip","format": "binary","url": "https://ghfast.top/https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geoip/cn.srs","download_detour": "direct-out"},
+        {"type": "remote","tag": "cnsite","format": "binary","url": "https://ghfast.top/https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/cn.srs","download_detour": "direct-out"},
+        {"type": "remote","tag": "opanai","format": "binary","url": "https://ghfast.top/https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/openai.srs","download_detour": "direct-out"},
+        {"type": "remote","tag": "youtube","format": "binary","url": "https://ghfast.top/https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/youtube.srs","download_detour": "direct-out"},
+        {"type": "remote","tag": "ad","format": "binary","url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs","download_detour": "direct-out"},
+        {"type": "remote","tag": "epicgames","format": "binary","url": "https://ghfast.top/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/epicgames.srs","download_detour": "direct-out"},
+        {"type": "remote","tag": "epicbrowser","format": "binary","url": "https://ghfast.top/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/epicbrowser.srs","download_detour": "direct-out"}
       ]
     }
   }
