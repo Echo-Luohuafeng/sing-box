@@ -96,7 +96,7 @@
         {"rule_set":"ad","outbound": "block-out"},
         {"rule_set": ["cnip","cnsite"],"outbound": "direct-out"},
         {"rule_set":"opanai","outbound": "autoUSA"},
-        {"rule_set":["youtube"],"outbound": "autoSp"},
+        {"rule_set":["youtube"],"outbound": "manualSelect"},
         {"rule_set": ["epicgames","epicbrowser"],"outbound": "epicAndSteam"}
       ],
       "rule_set": [
